@@ -1,0 +1,112 @@
+.cabecalhoMenu{
+    width: 24px;
+    height: 24px;
+    background-image: url("../Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.containerImg{
+    padding: 1em;
+}
+.listaMenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+.containerBotao:checked ~ .listaMenu{
+    display: block;
+
+}
+.menuTitulo , .menuItem{
+    padding: 1em;
+    background-color: var(--branco);
+}
+.menuTitulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+.menuLink{
+    background: var(--azulDegrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+.containerBotao{
+    display: none;
+}
+.containerTitulo{
+    display:none;
+}
+.opcoes{
+    display: none;
+}
+.containeDireitoTexto{
+    display: none;
+}
+@media screen and (min-width: 1024px){
+    .containerTitulo{
+        display: flex;
+        font-family:'Josefin Sans', sans-serif;
+        font-size: 30px;
+    }
+    .tituloNegrito{
+        font-weight: 700;
+    }
+    .opcoes{
+        display: flex;
+    }
+    .opcoesItem{
+        padding: 1em;
+        text-transform: uppercase;
+    }
+    .opcoesLink{
+        text-decoration: none;
+        color: #000000;
+    }
+    .favoritos{
+        display: none;
+    }
+    .cabecalhoMenu{
+        display: none;
+    }
+    #opcoesBotao:checked ~ .listaMenu{
+        display: block;
+        width: auto;
+    }
+    #opcoesBotao{
+        display: none;
+    }
+}
+@media screen and (min-width: 1728px) {
+    .containerLink{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #000000;
+        font-size: 20px;
+    }
+    .containeDireitoTexto{
+        display: flex;
+    }
+    .cabecalho{
+        padding: 0 2em;
+    }
+    .opcoes{
+        margin-right: auto;
+    }
+}
